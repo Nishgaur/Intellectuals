@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title> University</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-form">
+        <img src="images/logo.png" alt="Intellectuals" class="logo">
+        <form name="login-form">
+            <input type="text" name="uname">
+            <p class="username">
+              <span>U</span><span>s</span><span>e</span><span>r</span><span>n</span><span>a</span><span>m</span><span>e</span>
+            </p>
+            <input type="password" name="pswd">
+            <p class="password">
+              <span>P</span><span>a</span><span>s</span><span>s</span><span>w</span><span>o</span><span>r</span><span>d</span>
+            </p>
+            <p class="forgot" onclick="openForm()">Forgot Password?</p>
+            <button class="btn"><a href="home.html">Log Me in</a><button>
+        </form>
+      </div>
+    </div>
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+
+        <label for="otp">The OTP has been sent to the registered number. </label>
+        <input type="text" id="otp" placeholder="OTP" required>
+        <br>
+        <p>Tip💡: Eat almonds everyday to boost memory😁.</p>
+        <button type="submit" class="butn">Next -> </button>
+        <button type="submit" class="butn cancel" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+
+      <script>
+        // ----------- Pop-up Form -----------------
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        document.querySelector('.login-container').style.filter ="blur(10px)";
+      }
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        document.querySelector('.login-container').style.filter ="blur(0px)";
+      }
+
+
+
+    </script>
+  </body>
+</html>
