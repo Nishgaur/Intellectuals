@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Management System</title>
+  </head>
+  <body>
+    <!-- -----------------header ------------------ -->
+    <div class="header">
+      <a href="home.html" class="logo"><img src="images/logo.png" alt="Intelectuals"/></a>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="time-table.html">Time Table</a></li>
+          <li><a href="exam.html">Examination</a></li>
+          <li><a href="#" onclick="openForm()" id="chngPswd">Change Password</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- ----- Change Password Form ----------------- -->
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h2>Change Password</h2>
+
+        <label for="crntPswd">Current Password</label>
+        <input type="password" placeholder="Current Password" required>
+
+        <label for="newPswd">New Password</label>
+        <input type="password" placeholder="New Password" required>
+
+        <button type="submit" class="butn">Change Password</button>
+        <button type="submit" class="butn cancel" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+    <hr />
+
+    <!-- ----------------left column ------------------  -->
+    <div class="container">
+      <div class="left-col">
+        <div class="bio">
+          <img src="images/user-1.jpg" width="75px" height="75px" />
+          <span class="name">Jack</span>
+        </div>
+        <div class="profile">
+          <p>Section : K20EN</p>
+          <p>Roll Number : RK20ENA27</p>
+          <p>Regd. No. : 12010009</p>
+        </div>
+        <hr />
+        <div class="online-profile">
+          <div class="profile">
+            <span>Term : 20212</span>
+          </div>
+          <div class="profile">
+            <span>Programme : B.Tech(Hons) CSE</span>
+          </div>
+          <div class="profile">
+            <div>CGPA : 9.2</div>
+            <div>TGPA : 9.6</div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -----------------Right col ------------------ -->
+      <div class="right-col">
+        <div class="attendance">
+          <div>
+            <h2>Attendance Status</h2>
+            <hr class="attn-hr" />
+            <h4>Subject Wise</h4>
+            <div class="subject-wise">
+              <div class="cse202">
+                <div class="rings">
+                  <div class="percent">
+                    <svg>
+                      <circle cx="70" cy="70" r="40"></circle>             
+                      <circle cx="70" cy="70" r="40"></circle>                   
+                    </svg>
+                    <div class="number">
+                       <p class="per">100<span>PEL130</span></p>
+                    </div>
+                  </div>
+                  <div class="percent">
+                    <svg>
+                      <circle cx="70" cy="70" r="40"></circle>             
+                      <circle cx="70" cy="70" r="40"></circle>                   
+                    </svg>
+                    <div class="number">
+                       <p class="per">75<span>PHY109</span></p>
+                    </div>
+                  </div>
+                  <div class="percent">
+                    <svg>
+                      <circle cx="70" cy="70" r="40"></circle>             
+                      <circle cx="70" cy="70" r="40"></circle>                   
+                    </svg>
+                    <div class="number">
+                       <p class="per">81<span>MTH166</span></p>
+                    </div>
+                  </div>
+                  <div class="percent">
+                    <svg>
+                      <circle cx="70" cy="70" r="40"></circle>             
+                      <circle cx="70" cy="70" r="40"></circle>                   
+                    </svg>
+                    <div class="number">
+                       <p class="per">92<span>MEC103</span></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="time-table">
+          <h3 style="text-align: center">Today's Time Table</h3>
+          <table>
+            <thead>
+              <th>Time</th>
+              <th>Courses</th>
+              <th>Platform</th>
+              <th>Att. Status</th>
+            </thead>
+            <tr>
+              <td>10-11 AM</td>
+              <td>PEL130</td>
+              <td>MyClass</td>
+              <td>Present</td>
+            </tr>
+            <tr>
+              <td>12-01 PM</td>
+              <td>PHY109</td>
+              <td>Microsoft Teams</td>
+              <td>Absent</td>
+            </tr>
+            <tr>
+              <td>01-02 PM</td>
+              <td>MTH166</td>
+              <td>Google Meet</td>
+              <td>Absent</td>
+            </tr>
+            <tr>
+              <td>03-05 PM</td>
+              <td>MEC103</td>
+              <td>Big Blue Button</td>
+              <td>Absent</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-2">
+          <div class="announcements">
+            <h3>Announcements</h3>
+            <hr />
+            <div class="option">
+              <span class="btn active every" onclick="every()">All</span>
+              <span class="btn exam" onclick="exam()">Exam</span>
+              <span class="btn placement" onclick="placement()">Placement</span>
+              <span class="btn admin" onclick="admin()">Administrative/Misc</span>
+              <span class="btn sports" onclick="sports()">Co-Curricular/Sports/Cultural</span>
+            </div>
+            <div class="card1 card exam1">
+              LPU among the only three Indian Universities ranked ‘Top 200 in the World’ in Times Higher Education Impact Rankings 2021
+            </div>
+            <div class="card2 card sports1">
+              LPU MBA student won two Medals at International Shooting Sports Federation World Cup
+            </div>
+            <div class="card3 card sports1">
+              Experience the Exhilarating Odyssey of LPU’s School of Hotel Management and Tourism
+            </div>
+            <div class="card5 card admin1">
+              Union HRD Minister inaugurated three top events at LPU
+            </div>
+            <div class="card7 card sports1">
+              LPU Badminton Player to participate in 31st World University Games 2021 in China.
+            </div>
+            <div class="card8 card sports1">
+              LPU Students won 7 Medals at 29th Senior National Wushu Championship 2021
+            </div>
+            <div class="card9 card sports1">
+              70 International Expo Stalls at LPU’s ‘ONE WORLD 2019’ Fest
+            </div>
+            <div class="card10 card sports1">
+              Grand Opening Ceremony of Youth Vibe 2021
+            </div>
+            <div class="card11 card sports1">
+              Grooving To The Beats Of Diversity At 10th ONE WORLD 2019
+            </div>
+            <div class="card12 card placement1">
+             LPU Placements Knocks Covid-19 Blues
+            </div>
+          </div>
+          <div class="leave">
+            <h3>Teacher on Leave</h3>
+            <hr>
+            <div class="onLeave">
+              <p>John Doe : CSE202</p>
+            </div>
+            <div class="onLeave">
+              <p>Dr. Gurpal Singh : PEL130</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Developed By  <a href="https://www.linkedin.com/in/nishtha-gaur-5a942b1b6">Nishtha Gaur</a> & <a href="https://www.linkedin.com/in/ankit-nayak9/">Ankit Kumar Nayak</a></p>
+    </footer>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        document.querySelector('.container').style.filter ="blur(10px)";
+      }
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        document.querySelector('.container').style.filter ="blur(0px)";
+      }
+
+      function every(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.every');
+        console.log(btn);
+        btn.forEach(remove);
+        main.classList.add('active');
+        let disp = document.querySelectorAll('.card');
+        disp.forEach(show);
+      }
+      function exam(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.exam');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.exam1');
+        disp.forEach(show);
+      }
+      function placement(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.placement');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.placement1');
+        disp.forEach(show);
+      }
+      function admin(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.admin');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.admin1');
+        disp.forEach(show);
+      }
+      function sports(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.sports');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.sports1');
+        disp.forEach(show);
+      }
+
+      function remove(btn){
+        btn.classList.remove('active');
+      }
+
+      function hide(card) {
+        card.style.display = "none";
+      }
+      function show(disp){
+        disp.style.display ="block";
+      }
+    </script>
+  </body>
+</html>
