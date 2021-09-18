@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@300;700&display=swap');
+
+/*    Login Page     -------------- */
+* {
+      padding: 0;
+      margin: 0;
+      font-family: 'Poppins' , sans-serif ;
+      border: 0;
+      box-sizing: border-box;
+}
+
+/* --------- Change Password Overlay ------------ */
+
+/* ------------- Change Password ---------------- */
+.form-popup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #1e156fb6;
+      z-index: 9;
+      border-radius: 10%;
+      color: #ffe3de;
+}
+
+#form-container {
+      border-radius: 9%;
+      max-width: 350px;
+      padding: 10%;
+      background-color: #1e156fb6;
+}
+#form-container h2 {
+      margin: 5% 0;
+      color: #ffe3de;
+}
+#form-container input[type=password] {
+      width: 100%;
+      height: inherit;
+      color: inherit;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      border-radius: 0.5rem;
+      outline: none;
+}
+
+#form-container input[type=password]:focus {
+      background-color: #ffe3de;
+      color: black;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.8;
+}
+#form-container .butn {
+      background-color: #6be4a1;
+      padding: 10px 10px ;
+      border-radius: 0.5rem;
+      margin: 5%;
+      cursor:  pointer;
+}
+#form-container .butn:hover {
+      opacity: 1;
+}
+
+
+#form-container .cancel {
+      background-color: #dc3545;
+      color: white;
+}
+
+/* ----------------- ------------------- */
+
+.login-container {
+      height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)) ,url(images/login-bg.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.login-form {
+
+      color: #fff;
+      height: 60%;
+      width: 25%;
+      border: 2px solid white;
+      border-radius: 1.5rem;
+      position: relative;
+}
+.login-form::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #85d6bd , #f8b7ac);
+      border-radius: 1.3rem;
+      opacity: 0.4;
+}
+.heading {
+      position: relative;
+      top: 1rem;
+      left: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 0;
+}
+.login-form img {
+      position: absolute;
+      margin: 0;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+}
+.login-form form {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+form input {
+      height: 1.2rem;
+      width: 80%;
+      z-index: 100;
+      border-bottom: 2px solid white;
+      background: none;
+      outline: none;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 16px;
+      position: relative;
+      top: 10%;
+}
+
+form p {
+      position: relative;
+      top: calc(-1.8rem +10%);
+      font-size: 1.2rem;
+      user-select: none;
+}
+form p span {
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  color: #a3ddcb;
+}
+
+form input:focus + p {
+  transition: 0.3s;
+  transform: translateY(-15px);
+}
+form input:focus-within + p {
+      opacity: 0;
+}
+
+.btn {
+  width: 80%;
+  height: 10%;
+  position: relative;
+  top: 15%;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  position: relative;
+}
+.btn a {
+  text-decoration: none;
+  color: #0a043c;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 3%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.btn:active {
+  transform: scale(0.96);
+  background-color: #a3ddcb;
+  color: #0a043c;
+}
+
+.btn:visited {
+  color: #0a043c;
+}
+
+.forgot {
+      position: relative;
+      top: 3%;
+      left: 22%;
+      opacity: 0.6;
+      font-size: 0.8rem;
+}
+.forgot:hover {
+      opacity: 1;
+      cursor: pointer;
+}
+
+/* Time Table */
+
+body {
+      background-color: #ffe3dea8;
+}
+
+.header {
+      position: fixed;
+      top: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(45deg,#201775 ,#130c52);
+      z-index: 5;
+      height: 10vh;
+      width: 100vw;
+      box-shadow: 0px 3px 10px 0px rgba(30,21,111,0.71);
+}
+.header .logo {
+      padding: 0;
+      margin: 0;
+      height: 90px;
+      margin-left: 10px;
+}
+.header img {
+      color: #ffe3de;
+      height: 90px;
+      width: 90px;
+      cursor: pointer;
+}
+.header nav ul {
+      list-style-type: none;
+}
+
+.header nav ul li {
+      background: none;
+      display: inline-block;
+      margin: 1rem 2rem;
+      position: relative;
+      top: 1.2rem;
+      font-size: 1.2rem;
+      color: #ffe3de;
+      transition: all 0.5s ease-in;
+      font-weight: 600;
+      user-select: none;  
+}
+.header nav ul li a {
+      padding: 0.6rem;
+      border: 2px solid #ffe3de;
+      border-radius: 0.5rem;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+}
+.header nav ul li a:active {
+      transition: all 0.3s;
+      transform: scale(0.85); 
+}
+.header nav ul li a:hover {
+      color: #0a043c;
+      background-color: #ffe3de;
+}
+
+.col-2 {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 5%;
+}
+
+/* calendar */
+.cal {
+  width:340px; 
+  background:#332f2e; 
+  border-radius:5px; 
+  overflow:hidden; 
+  display:block; 
+  margin-bottom:10px; 
+  margin:0 auto; 
+  margin-top:100px;
+  height: 50vh;
+  padding:0 10px 10px 10px; 
+  box-sizing:border-box!important; 
+  background:#749d9e;  
+  background: linear-gradient(45deg,#25a7db7a , #5fe6bb7c )!important;
+}
+.cal:hover {
+      cursor: none;
+}
+
+.cal-month {
+  font:18px 'Raleway'; 
+  font-weight:700; 
+  color: #0a043c; 
+  display:block; 
+  margin:18px 0 0 0; 
+  text-transform:uppercase; 
+  text-align:center; 
+  letter-spacing:1px;
+}
+
+.cal span {
+  font:11px 'Poppins'; 
+  font-weight:700; 
+  color:#0a043c; 
+  text-align:center; 
+  width:42px; 
+  height:42px; 
+  display:inline-block; 
+  overflow:hidden; 
+  line-height:40px;
+}
+.cal span.hov:hover {
+      background-color: #0a043c;
+      color: white;
+      cursor: none;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      transition: all 0.5s;
+}
+.fade {
+      color: #78797a;
+      opacity: 0.2;
+}
+
+/* Time Table */
+
+.view-tt {
+      flex-basis: 70%;
+      margin-top:100px;
+      margin-right: 1%;
+}
+table {
+      width: 100%;
+      border-collapse:separate;
+}
+table,tr{
+      border: 1px solid black;
+      border-collapse: collapse;
+}
+table th {
+      background-color: #03506f !important;
+      color: white;
+      font-family: Raleway;
+      padding: 1rem;
+}
+th:nth-child(1) {
+      text-align: left;
+      padding-left: 2%;
+}
+th:nth-child(3) {
+      text-align: right;
+      padding-right: 2%;
+}
+td:nth-child(1) {
+      text-align: left;
+      padding-left: 2%;
+}
+td:nth-child(2) {
+      text-align: center;
+      padding-left: 2%;
+}
+td:nth-child(3) {
+      text-align: right;
+      padding-right: 2%;
+}
+tr:nth-child(even) {
+      background-color: #a3ddcbab;
+}
+tr:nth-child(odd) {
+      background-color: #ffe3de;
+}
+table tr:hover {
+      background-color: #201775;
+      color: white;
+}
+.right-col tr:nth-child(1),.right-col tr:nth-child(4),.right-col tr:nth-child(5)    {
+      background-color: #a3ddcbab;
+}
+.right-col tr:nth-child(2),.right-col tr:nth-child(4),.right-col tr:nth-child(6),.right-col tr:nth-child(8) {
+      background-color: #25a7dbad;
+}
+
+
+/* ------------- Pop-up Form ---------------- */
+.form-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #1e156fb6;
+      z-index: 9;
+      border-radius: 10%;
+      color: #ffe3de;
+}
+
+.form-container {
+      border-radius: 9%;
+      padding: 10%;
+      width: 100%;
+      background-color: #1e156fb6;
+}
+
+.form-container input[type=text] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      border-radius: 0.5rem;
+      outline: none;
+}
+
+.form-container input[type=text]:focus {
+      background-color: #ffe3de;
+      color: black;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.8;
+}
+.form-container .butn {
+      background-color: #6be4a1;
+      padding: 10px 10px;
+      border-radius: 0.5rem;
+      margin: 5%;
+      cursor:  pointer;
+}
+.form-container .butn:hover {
+      opacity: 1;
+}
+
+
+.form-container .cancel {
+      margin-left: 30%;
+      background-color: #dc3545;
+      color: white;
+}
+#viewMarks .form-container {
+      width: 500px;
+      overflow: hidden;
+
+}
+div.term {
+      border: 1px solid black;
+      border-radius: 0.4rem;
+      background: #ffe3de;
+      color: black;
+      padding-left: 10px;
+      width: 100%;
+      cursor: pointer;
+      background-color: #6bbddf;
+}
+table.term-1-tab , td{
+      width: 100%;
+      border: 1px solid black;
+}
+table.term-1-tab tr{
+      color: black;
+}
+table.term-2-tab {
+      width: 100%;
+}
+table.term-2-tab tr{
+      color: black;
+      border: none;
+}
+
+.term-1-tab {
+      display: none;
+}
+.term-2-tab {
+      display: none;
+}
+/* ------------examination--------------- */
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 10vh;
+      margin-bottom: 25vh;
+}
+
+.container .left-col {
+      flex-basis: 20%;
+      border: 2px solid #a3ddcbab;
+      border-radius: 1rem;
+      position: relative;
+      top: 1.5rem;
+      left: 0.5rem;
+      overflow: hidden;
+      height: 60vh;
+}
+.container .left-col::after {
+      position: absolute;
+      content: '';
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg,#25a8db , #5fe6bb );
+      z-index: -5;
+}
+.container .left-col .cgpa {
+      font-size:36px;
+      text-align: center;
+      margin: auto;
+      position: relative;
+}
+
+.container .left-col>p span{
+      font-size: 14px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+}
+.container .left-col hr {
+      width: 80%;
+      color: black;
+      border: 1px solid black;
+      border-radius: 50%;
+      margin: 5% auto;
+}
+.container .left-col .marks {
+      margin: 10% 10%;
+
+}
+.view-marks {
+      text-decoration: none;
+      border: 1px solid black;
+      background-color: #1d156e;
+      color: white;
+      padding: 1%;
+      border-radius: 0.4rem;
+}
+.reappear {
+      animation: blink 1s linear infinite;
+      border: 1px solid black;
+      background-color: #1d156e;
+      color: white;
+      padding: 1%;
+      border-radius: 0.4rem;
+}
+@keyframes blink {
+      0%{color: white;}
+      50%{color: red;}
+}
+.container .right-col {
+      flex-basis: 70%;
+      margin-right: 5%;
+      margin-top: 1rem;
+}
+
+.PHY109 {
+      display: none;
+}
+.MEC103 {
+      display: none;
+}
+.MTH166 {
+      display: none;
+
+}
+.PEL130 {
+      display: none;
+}
+table caption {
+      font-size: 24px;
+      font-weight: bold;
+}
+td {
+      width: 30%;
+      cursor: pointer;
+      user-select: none;
+}
+
+/* -------- footer -------------- */
+
+footer {
+      width: 100%;
+      height: 5vh;
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.6);
+      font: "Poppins";
+}
+footer a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.6);
+}
+footer a:hover {
+      text-decoration: underline;
+      color: rgba(0, 0, 0, 1);
+      cursor: pointer;
+}
+.MTH166 {
+      display: none;
+}
+.PEL130 {
+      display: none;
+}
